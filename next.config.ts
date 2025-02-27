@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+trailingSlash: true,
+output: 'export',
+env: {
+    DATABASE_URL: process.env.DATABASE_URL,
+  },
+}
+module.exports = nextConfig
